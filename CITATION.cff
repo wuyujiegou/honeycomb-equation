@@ -15,3 +15,15 @@ abstract: >-
   including proof-credit closure, query assembly, six-face evaluation, lineage checks, PDE
   examples, and weak-limit ingress regression cases.
 license: MIT
+
+repository-code: "https://github.com/wuyujiegou/honeycomb-equation"
+
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24189825"
+    description: "Zenodo software record (v0.2.1)"
+
+references:
+  - type: doi
+    value: "10.5281/zenodo.24189752"
+    description: "Companion preprint (v1.0)"
