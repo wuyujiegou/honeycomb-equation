@@ -1,29 +1,33 @@
 cff-version: 1.2.0
-message: "If you use this software artifact, please cite the software companion preprint and this artifact."
-title: "Honeycomb Equation Reference Executable Semantics"
+message: If you use this software artifact, please cite the software companion preprint
+  and this artifact.
+title: Honeycomb Equation Reference Executable Semantics
 type: software
 authors:
+- family-names: Zhang
+  given-names: Bingchao
+  affiliation: Huangshi Wuyu Structural Intelligence Technology Co., Ltd.
+  orcid: https://orcid.org/0009-0004-1160-2602
+  email: sanhun2020@outlook.com
+version: 0.2.1
+date-released: '2026-11-13'
+abstract: Reference executable semantics and conformance kernel for the Honeycomb
+  Equation framework, including proof-credit closure, query assembly, six-face evaluation,
+  lineage checks, PDE examples, and weak-limit ingress regression cases.
+license: MIT
+repository-code: https://github.com/wuyujiegou/honeycomb-equation
+identifiers:
+- type: doi
+  value: 10.5281/zenodo.24189825
+  description: Zenodo software record (v0.2.1)
+references:
+- type: unpublished
+  authors:
   - family-names: Zhang
     given-names: Bingchao
-    affiliation: "Huangshi Wuyu Structural Intelligence Technology Co., Ltd."
-    orcid: "https://orcid.org/0009-0004-1160-2602"
-    email: "sanhun2020@outlook.com"
-version: "0.2.1"
-date-released: "2026-11-13"
-abstract: >-
-  Reference executable semantics and conformance kernel for the Honeycomb Equation framework,
-  including proof-credit closure, query assembly, six-face evaluation, lineage checks, PDE
-  examples, and weak-limit ingress regression cases.
-license: MIT
-
-repository-code: "https://github.com/wuyujiegou/honeycomb-equation"
-
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.24189825"
-    description: "Zenodo software record (v0.2.1)"
-
-references:
-  - type: doi
-    value: "10.5281/zenodo.24189752"
-    description: "Companion preprint (v1.0)"
+    orcid: https://orcid.org/0009-0004-1160-2602
+  title: 'Honeycomb Equation Reference Executable Semantics for Query-Scoped PDE Certification:
+    Conformance, Provenance, and Semantic Regression'
+  year: 2026
+  doi: 10.5281/zenodo.24189752
+  url: https://zenodo.org/records/24189752
