@@ -35,3 +35,16 @@ See `CITATION.cff`. Author: **Zhang, Bingchao** — ORCID [0009-0004-1160-2602](
 ## License
 
 MIT — see `LICENSE`.
+
+## Checksums
+
+`SHA256SUMS.txt` at this repository root lists SHA-256 values for every tracked file except the manifest itself. It is computed from the Git blob bytes of the commit that first added the manifest, so it describes that repository snapshot.
+
+Three checksum contexts are distinct and should not be conflated:
+
+- **Repository manifest** (this file, `SHA256SUMS.txt` at the repository root) — the current repository snapshot.
+- **Archived manifest** (inside `HE_Software_v0.2.1.zip`) — the frozen packaging snapshot, unchanged.
+- **Zenodo manifest** (`SHA256SUMS.txt` published in the Zenodo software record) — covers the full local handoff folder, including documents that were not uploaded; it does not verify against the Zenodo download directory alone.
+
+Working trees on Windows may check out CRLF line endings while the stored blobs are LF. To reproduce the manifest, read the blob bytes (`git cat-file -p <blob>`) or download the raw file from GitHub, not a local working copy.
+
