@@ -1,0 +1,131 @@
+{
+  "model": "heat_open_port",
+  "geometry": {
+    "domain": "Omega",
+    "dimension": 2,
+    "class": "bounded_lipschitz"
+  },
+  "time": {
+    "interval": [
+      0,
+      "T"
+    ],
+    "direction": "FORWARD"
+  },
+  "fields": {
+    "u": {
+      "role": "STATE",
+      "value": "scalar",
+      "spatial_space": "H1(Omega)",
+      "time_space": "L2(0,T;H1)",
+      "time_derivative": {
+        "order": 1,
+        "space": "L2(0,T;H1*)"
+      }
+    }
+  },
+  "data": {
+    "kappa": {
+      "role": "COEFFICIENT",
+      "semantic": "EXACT_RATIONAL",
+      "rational": [
+        1,
+        2
+      ]
+    },
+    "f": {
+      "role": "SOURCE",
+      "semantic": "SYMBOLIC",
+      "value": "f"
+    },
+    "u0": {
+      "role": "INITIAL",
+      "semantic": "SYMBOLIC",
+      "value": "u0"
+    }
+  },
+  "ports": [
+    {
+      "id": "flux",
+      "semantic_space": "H-1/2(Gamma)",
+      "orientation": "OUTWARD",
+      "realization": "WEAK_CONORMAL",
+      "field": "u",
+      "boundary": "Gamma"
+    }
+  ],
+  "equations": [
+    {
+      "id": "heat_balance",
+      "sense": "WEAK",
+      "test": {
+        "symbol": "phi",
+        "space": "H1(Omega)"
+      },
+      "storage": {
+        "id": "storage",
+        "expr": "<u_t,phi>",
+        "symbols": [
+          "u",
+          "phi"
+        ]
+      },
+      "terms": [
+        {
+          "id": "diffusion",
+          "sign": 1,
+          "role": "INTERNAL",
+          "expr": "kappa*int(grad(u).grad(phi))",
+          "symbols": [
+            "kappa",
+            "u",
+            "phi"
+          ]
+        },
+        {
+          "id": "source",
+          "sign": -1,
+          "role": "SOURCE",
+          "expr": "<f,phi>",
+          "symbols": [
+            "f",
+            "phi"
+          ]
+        },
+        {
+          "id": "boundary_flux",
+          "sign": -1,
+          "role": "PORT",
+          "expr": "<flux,trace(phi)>",
+          "symbols": [
+            "flux",
+            "phi"
+          ],
+          "port_ref": "flux"
+        }
+      ]
+    }
+  ],
+  "initial": [
+    {
+      "field": "u",
+      "data_ref": "u0",
+      "derivative_slot": 0
+    }
+  ],
+  "boundary": [
+    {
+      "id": "Gamma",
+      "field": "u",
+      "kind": "PORT",
+      "semantic": "SYMBOLIC",
+      "port_ref": "flux"
+    }
+  ],
+  "solution": {
+    "equation_sense": "WEAK",
+    "regularity": {
+      "u": "L2(H1) & H1(H1*)"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run": "two_cell_global_mean_law",
+  "bundle_ref": "two_cell_interface",
+  "query": {
+    "kind": "LAW",
+    "observable": {
+      "primitive": "SUM_LOCAL_MEAN",
+      "field": "u"
+    },
+    "reader": {
+      "kind": "CONSTANT_TEST",
+      "id": "one"
+    }
+  },
+  "scope": {
+    "level": "CONTINUUM",
+    "tag": "weak"
+  }
+}

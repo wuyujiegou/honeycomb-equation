@@ -1,0 +1,16 @@
+{
+  "run": "heat_open_mean_value",
+  "model_ref": "heat_open_port",
+  "query": {
+    "kind": "VALUE",
+    "observable": "mean(u)",
+    "reader": {
+      "kind": "CONSTANT_TEST",
+      "id": "one"
+    }
+  },
+  "scope": {
+    "level": "CONTINUUM",
+    "tag": "weak"
+  }
+}

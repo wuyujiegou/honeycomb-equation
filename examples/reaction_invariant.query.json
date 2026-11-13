@@ -1,0 +1,6 @@
+{
+  "run": "reaction_invariant",
+  "model_ref": "reaction_diffusion",
+  "query": {"kind": "LAW", "observable": "int(ell^T u)", "reader": {"kind": "CONSTANT_VECTOR_TEST", "id": "ell"}},
+  "scope": {"level": "CONTINUUM", "tag": "weak"}
+}

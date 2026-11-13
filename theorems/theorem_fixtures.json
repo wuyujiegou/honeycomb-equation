@@ -1,0 +1,160 @@
+{
+  "fixture_set_id": "analytic-fixtures-v8",
+  "fixtures": [
+    {
+      "claim": "the weak gradient of the constant scalar test is zero, so a declared diffusion term of the exact grad(u)-grad(phi) pattern is annihilated by that reader",
+      "id": "constant-gradient-zero-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "constant scalar test in weak gradient pairing",
+      "theorem_kind": "CONSTANT_SCALAR_GRADIENT_ZERO"
+    },
+    {
+      "claim": "the constant scalar test 1 belongs to H1(Omega) on the declared bounded Lipschitz domain and is admissible for the explicit weak balance",
+      "id": "constant-test-h1-admissibility-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "bounded Lipschitz domain with H1 test space",
+      "theorem_kind": "CONSTANT_SCALAR_H1_ADMISSIBILITY"
+    },
+    {
+      "claim": "the trace of the constant scalar H1 test 1 is the constant boundary test 1, so a declared weak-conormal port pairing <q,trace(phi)> projects exactly to <q,trace(1)> under the constant reader",
+      "id": "constant-trace-one-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "bounded Lipschitz domain with scalar H1 test and declared weak boundary dual pairing",
+      "theorem_kind": "CONSTANT_SCALAR_TRACE_ONE"
+    },
+    {
+      "claim": "the weak gradient of a declared constant vector test is zero, so the exact declared diffusion gradient pairing is annihilated by that reader",
+      "id": "constant-vector-gradient-zero-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "constant vector test in weak gradient pairing",
+      "theorem_kind": "CONSTANT_VECTOR_GRADIENT_ZERO"
+    },
+    {
+      "claim": "a declared finite exact constant vector belongs to H1(Omega;R^m) and is admissible for the explicit vector weak balance",
+      "id": "constant-vector-test-h1-admissibility-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "bounded Lipschitz domain with vector H1 test space",
+      "theorem_kind": "CONSTANT_VECTOR_H1_ADMISSIBILITY"
+    },
+    {
+      "claim": "for the explicit sequence u_n=sqrt(n) 1_[0,1/n] on [0,1], u_n converges weakly to 0 in L2, generates the value Young measure delta_0, and its quadratic energy measures converge weak-star to the spatial concentration measure delta_0",
+      "evidence_schema": {
+        "certified_kinds": [
+          "WEAK_STATE",
+          "YOUNG_MEASURE",
+          "CONCENTRATION_MEASURE"
+        ],
+        "witness": {
+          "ambient_space": "L2_0_1",
+          "concentration_measure": "SPATIAL_DELTA_0",
+          "sequence_family": "SQRT_N_INDICATOR_0_1_OVER_N",
+          "weak_limit": "0",
+          "young_measure": "VALUE_DELTA_0"
+        }
+      },
+      "id": "explicit-concentration-weak-young-concentration-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "weak L2 sequence with explicit concentration generator",
+      "theorem_kind": "EXPLICIT_SEQUENCE_EVIDENCE"
+    },
+    {
+      "claim": "for the explicit sequence u_n=sgn(sin(nx)) on the periodic one-dimensional torus, u_n converges weakly to 0 in L2 and generates the homogeneous Young measure 1/2 delta_-1 + 1/2 delta_1",
+      "evidence_schema": {
+        "certified_kinds": [
+          "WEAK_STATE",
+          "YOUNG_MEASURE"
+        ],
+        "witness": {
+          "ambient_space": "L2_PERIODIC_1D",
+          "sequence_family": "SIGN_SIN_NX",
+          "weak_limit": "0",
+          "young_measure": "HALF_DELTA_MINUS1_PLUS_HALF_DELTA_PLUS1"
+        }
+      },
+      "id": "explicit-oscillation-weak-young-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "periodic weak L2 sequence with explicit oscillatory generator",
+      "theorem_kind": "EXPLICIT_SEQUENCE_EVIDENCE"
+    },
+    {
+      "claim": "applying the same fixed linear functional to an exact signed balance preserves the signed balance exactly; in particular sum_i c_i q_i=0 implies sum_i c_i <q_i,psi>=0",
+      "id": "linear-functional-signed-balance-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "exact signed balance in a common vector space evaluated by one fixed linear functional",
+      "theorem_kind": "LINEAR_FUNCTIONAL_SIGNED_BALANCE"
+    },
+    {
+      "claim": "applying the same fixed linear functional to an exact signed relation preserves its right-hand-side defect exactly; sum_i c_i q_i=delta implies sum_i c_i <q_i,psi>=<delta,psi>",
+      "id": "linear-functional-signed-relation-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "exact signed relation in a common vector space evaluated by one fixed linear functional",
+      "theorem_kind": "LINEAR_FUNCTIONAL_SIGNED_RELATION"
+    },
+    {
+      "claim": "for K:l2->l2, Kx=(x_n/n), the vector y*=(1/n) lies in closure(ran K) but not in ran K; closure membership therefore cannot be used as an executable range witness without a closed-range/range-membership certificate",
+      "id": "nonclosed-range-guard-v1",
+      "role": "trusted_counterexample_fixture",
+      "scope": "infinite-dimensional Hilbert relation",
+      "theorem_kind": "NONCLOSED_RANGE_GUARD",
+      "witness_schema": {
+        "closure_membership": true,
+        "formalization_status": "trusted_counterexample_fixture",
+        "operator": "diag(1/n)",
+        "range_membership": false,
+        "space": "l2",
+        "target": "(1/n)"
+      }
+    },
+    {
+      "claim": "for the declared periodic mean query, a divergence-form weak defect pairs to zero with the constant test; under the declared query-transparency premises the strong and measure-valued relations have the same query image",
+      "id": "periodic-mean-divergence-defect-transparency-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "periodic continuum weak relation with mean query and divergence-form defect",
+      "theorem_kind": "QUERY_DEFECT_TRANSPARENCY",
+      "witness_schema": {
+        "constant_test_annihilation": true,
+        "defect_form": "DIVERGENCE",
+        "formalization_status": "trusted_theorem_fixture",
+        "geometry": "PERIODIC",
+        "query": "SPATIAL_MEAN",
+        "query_image_equality": true
+      }
+    },
+    {
+      "claim": "for u_n=sqrt(n)1_[0,1/n] weakly converging to 0 in L2, the quadratic measures u_n^2 dx converge weak-star to a Dirac mass; concentration information is not captured by the weak state or an oscillation-only representation",
+      "id": "weak-concentration-measure-guard-v1",
+      "role": "trusted_counterexample_fixture",
+      "scope": "weak L2 convergence with concentration-sensitive quadratic observable",
+      "theorem_kind": "WEAK_CONCENTRATION_MEASURE_GUARD"
+    },
+    {
+      "claim": "a fixed bounded linear functional is continuous for weak convergence, so its scalar observable converges without an additional nonlinear defect",
+      "id": "weak-linear-functional-continuity-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "Hilbert weak convergence tested by a fixed bounded linear functional",
+      "theorem_kind": "WEAK_LINEAR_FUNCTIONAL_CONTINUITY"
+    },
+    {
+      "claim": "weak convergence of states alone does not certify exact convergence of nonlinear observables",
+      "id": "weak-nonlinear-limit-guard-v1",
+      "role": "trusted_counterexample_fixture",
+      "scope": "weak convergence with nonlinear observable",
+      "theorem_kind": "WEAK_NONLINEAR_LIMIT_GUARD"
+    },
+    {
+      "claim": "for u_n=sgn(sin(nx)) weakly converging to 0, u_n^2 remains 1; weak state convergence alone loses oscillation information and a Young-measure or equivalent defect representation is required",
+      "id": "weak-oscillation-young-measure-guard-v1",
+      "role": "trusted_counterexample_fixture",
+      "scope": "weak L2 convergence with bounded nonlinear observable",
+      "theorem_kind": "WEAK_OSCILLATION_YOUNG_MEASURE_GUARD"
+    },
+    {
+      "claim": "fixed admissible test covector converts the weak time derivative pairing to the target weak derivative under the declared temporal regularity premises",
+      "id": "weak-time-derivative-pairing-v1",
+      "role": "trusted_theorem_fixture",
+      "scope": "continuum weak solution class",
+      "theorem_kind": "WEAK_TIME_DERIVATIVE_PAIRING"
+    }
+  ],
+  "version": "0.8.0"
+}

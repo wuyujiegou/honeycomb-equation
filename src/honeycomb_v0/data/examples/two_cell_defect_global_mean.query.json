@@ -1,0 +1,19 @@
+{
+  "run": "two_cell_defect_global_mean",
+  "bundle_ref": "two_cell_interface_defect",
+  "query": {
+    "kind": "LAW",
+    "observable": {
+      "primitive": "SUM_LOCAL_MEAN",
+      "field": "u"
+    },
+    "reader": {
+      "kind": "CONSTANT_TEST",
+      "id": "one"
+    }
+  },
+  "scope": {
+    "level": "CONTINUUM",
+    "tag": "weak"
+  }
+}

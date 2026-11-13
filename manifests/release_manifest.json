@@ -1,0 +1,395 @@
+{
+  "release_id": "51db4cc3854e6a50395b33f71109a54f0dc84c3a1aae2d89cc8a6448fa12cde1",
+  "release_spec": {
+    "canonicalization": "hc-canon-v2",
+    "components": [
+      {
+        "content_id": "7fa4498b9f762e0b2f6393766e09b4cfcbae29979e949e765524b55264fb167e",
+        "object_id": "driver:build_release_manifest.py",
+        "version": "0.9.0"
+      },
+      {
+        "content_id": "6d49f00880a6beadf5f1a868ce9ad23c8bb205b32eddfa26000d536460b66462",
+        "object_id": "driver:run_pde.py",
+        "version": "0.5.0"
+      },
+      {
+        "content_id": "e2a3990513d1599943186c02d6356b0cdb224ed44b0129d4f7b993df6163743c",
+        "object_id": "driver:run_release.py",
+        "version": "0.9.0"
+      },
+      {
+        "content_id": "ee4b14fea1a461c05087b4f03c10bc4c056d9b2f23c824e63dcfaa4deb7238e2",
+        "object_id": "driver:run_weak_evidence.py",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "bef2c9bb4392562446d0113a12d5efac2edd5d88466850b2dcd17e1466fedcc1",
+        "object_id": "rules:adapter_rules.json",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "0f4de76c39414e52be556cd6c1738ba7108eae67791f87b715f8a714a8cd56ec",
+        "object_id": "src:__init__.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "a339c8c089f23f753dca1e2ffb0653830772c81041ac006780b3b3b63688b72b",
+        "object_id": "src:adapters.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "a0736df40388befd57602342a627284b3c5f0a11ab428240b9a64da949c06728",
+        "object_id": "src:assemblers.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "873d6435ebdd41ea4cd845281ea3d74287be8e7e24604e3093dab2d78277ca2b",
+        "object_id": "src:canonical.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "90efda4ead687962a10ca57150c6fc3822026c7c71ddcccf049262dde4edcc51",
+        "object_id": "src:checkers.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "013ce7522a3ff79a9fd19e506313e8864382f9fae09f670e75e85109d8c94e2c",
+        "object_id": "src:composition.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "9ed77e32c3da943967b1c2eb92d227cd92632f48b1e4275b8a45edcc101cb9a9",
+        "object_id": "src:conformance.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "c77b269a5ad1abcc19b3cb0168236de2004d38c3dda9092b6bee462ec30837f8",
+        "object_id": "src:dsl.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "f5275968c0e9978286b7555d8346789a514fedc2c0976aa64d01e3e1a7fd4e45",
+        "object_id": "src:faces.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "object_id": "src:fixtures.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "951fe22fc606b4e385ff1016fac712628b3fb798feacfda6e2bcd45d128f9e0c",
+        "object_id": "src:install_cli.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "fc41fae5a6d5e66b54d3866ca49f4172c81ed1cb7f0c7c3c6c6eec00de1e5712",
+        "object_id": "src:kernel.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "bd9900454ebabdbc4b18c3c617c800922c299cd8f5102f35078f90bac9f7eb16",
+        "object_id": "src:measure.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "d49c67aa9729c9bb47406959a537613d1a392e2548d40029ea3eca9963835127",
+        "object_id": "src:pde.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "ae5105d63e4b1ef57aa71f2e53f0a1a3c2378b770585b9cd3171cb516bef8b8a",
+        "object_id": "src:release.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "a84f0e511c6bedf2ad19d5a39f570e5565fec24177fc998f9c2e94749153d46f",
+        "object_id": "src:report.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "ea9eef125e7d00d60804fd19b3c74dda1f158bad6ef19def3eb1a776c2f0a865",
+        "object_id": "src:rules.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "e9573714cf2ecf72779cb8c4df52c951480579cfcc5d4e171f6b761a21abeccd",
+        "object_id": "src:types.py",
+        "version": "0.3.0"
+      },
+      {
+        "content_id": "9e8b9b1d7864776d4c528745cfc7032287d2fa9260035a1ba8c0a3bd508feb1b",
+        "object_id": "src:weak_evidence.py",
+        "version": "0.3.0"
+      }
+    ],
+    "fixtures": [
+      {
+        "content_id": "cf3f165ecaf124bdd03c3a9910b6c00f697416b847a1fc268dc5506d54de332f",
+        "object_id": "example:heat_mean.query.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "bdaed51f6c10ea5e34058ab5ae30d1087e30c067f520817ada31a33e83ec5556",
+        "object_id": "example:heat_neumann.model.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "6c899f3277eb130924461ff04f2df92b08cca0ce85f3d20704005f1fcd965cc6",
+        "object_id": "example:heat_open_mean.query.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "057a21e6efc75103dbfc55fc534e505d7c5d72cca3a01e5f9e22db07afb90de6",
+        "object_id": "example:heat_open_mean_value.query.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "ceaaa09b2bb365eea84f505aa74075aece4a45e760df29419e2796b39dc6d79f",
+        "object_id": "example:heat_open_port.model.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "560201c82a63195e5c0d1937b34a46c718f94db1c0630ea78c00533c72720394",
+        "object_id": "example:reaction_diffusion.model.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "40982203d0fdc4f7467367d0e7d86cdf4906de969a20cab278fd57bfbbd1708f",
+        "object_id": "example:reaction_invariant.query.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "60907085c2bd3034d222d0bfaf03bbab78d2753d3caabce99edd39176ad0351a",
+        "object_id": "example:two_cell_defect_global_mean.query.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "ed941e3e5f0f2015872a57b5d0bdb41af11b17c2ce5bff6fdfed808f38cf5885",
+        "object_id": "example:two_cell_global_mean.query.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "6ad7a544ba299dfed9b4e978870135e65cdbdde80095ebee7cd08e67f8406299",
+        "object_id": "example:two_cell_interface.bundle.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "0988639969fe8728ff9371a91fc58aab09f9d4d37995b5b49ec7b9e7e7e05271",
+        "object_id": "example:two_cell_interface_defect.bundle.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "7da9a51886ad1ebed74bc016f736a2f7cf65e591f19eae4cfbbebf04b5c4ee9d",
+        "object_id": "example:weak_concentration.evidence.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "347500273491f97305c727e9da931966576326950a4a05ea9e523db9eb399a5d",
+        "object_id": "example:weak_oscillation.evidence.json",
+        "version": "0.1.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "object_id": "fixture-suite",
+        "version": "0.8.0"
+      }
+    ],
+    "hash_scheme": "sha256",
+    "oracles": [
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_A",
+        "object_id": "ga.identity.transport",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_B",
+        "object_id": "gb.scope.firewall",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_C",
+        "object_id": "gc.conflict.quarantine",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_D",
+        "object_id": "gd.support.cycle",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_E",
+        "object_id": "ge.numeric.semantic",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_F",
+        "object_id": "gf.view.dynamic",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_G",
+        "object_id": "gg.empty.vacuity",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "G_G",
+        "object_id": "gg.he.closed.loop",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.auto.heat.evidence",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.auto.heat.open-port.evidence",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.auto.rd.evidence",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.declarative.adapter.rules",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.dsl.heat.bind",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.dsl.rd.bind",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R1",
+        "object_id": "r1.norm.complete",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R2",
+        "object_id": "r2.auto.interface.composition",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R2",
+        "object_id": "r2.auto.interface.defect",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R2",
+        "object_id": "r2.dsl.interface.bind",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R2",
+        "object_id": "r2.fvm.incidence",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R3",
+        "object_id": "r3.behavioral.quotient",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R4",
+        "object_id": "r4.transition.congruence",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R5",
+        "object_id": "r5.branch.image",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R6",
+        "object_id": "r6.infinite.dual",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R6",
+        "object_id": "r6.infinite.guard",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R6",
+        "object_id": "r6.measure.outer.query",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R6",
+        "object_id": "r6.measure.query.transparency",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R6",
+        "object_id": "r6.weak.defect",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R6",
+        "object_id": "r6.weak.evidence.ingress",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R7",
+        "object_id": "r7.truth.output.scope",
+        "version": "0.8.0"
+      },
+      {
+        "content_id": "0e9858056d696cf622e2da3ec6165ec66abadc9cce157f8593907d5bd2c9aa3f",
+        "family": "R8",
+        "object_id": "r8.rollback.multisupport",
+        "version": "0.8.0"
+      }
+    ],
+    "theorem_fixtures": [
+      {
+        "content_id": "f7f30d876771363ca9e4935799444ab4e97ad1c7927d328d0e2716b1d724121a",
+        "object_id": "theorem-fixtures",
+        "version": "0.8.0"
+      }
+    ],
+    "trust_policy": {
+      "content_id": "2f591dbc936591b2508acda017e7bbed2000f83850555e7c7924e2946dd9d35c",
+      "object_id": "trust-policy",
+      "version": "0.2.0"
+    }
+  }
+}

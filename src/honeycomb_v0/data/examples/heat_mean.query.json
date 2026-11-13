@@ -1,0 +1,6 @@
+{
+  "run": "heat_mean_law",
+  "model_ref": "heat_neumann",
+  "query": {"kind": "LAW", "observable": "mean(u)", "reader": {"kind": "CONSTANT_TEST", "id": "one"}},
+  "scope": {"level": "CONTINUUM", "tag": "weak"}
+}

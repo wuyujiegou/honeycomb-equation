@@ -1,0 +1,225 @@
+{
+  "rule_set_id": "balance-reader-adapter-rules-v3",
+  "version": "0.3.0",
+  "rules": [
+    {
+      "id": "heat-mean-constant-test-v1",
+      "version": "0.2.0",
+      "query": {
+        "kind": "LAW",
+        "reader_kind": "CONSTANT_TEST",
+        "reader_id_mode": "LITERAL",
+        "reader_id": "one",
+        "observable_primitive": "MEAN_STATE"
+      },
+      "profile": {
+        "domain_class": "bounded_lipschitz",
+        "solution_sense": "WEAK",
+        "state_value_primitive": "SCALAR",
+        "test_space_template": "H1({domain})",
+        "field_spatial_space_template": "H1({domain})",
+        "field_time_space": "L2(0,T;H1)",
+        "field_derivative_space": "L2(0,T;H1*)",
+        "regularity": "L2(H1) & H1(H1*)",
+        "time_derivative_order": 1,
+        "boundary_primitive": "EXACT_ZERO_NEUMANN"
+      },
+      "storage": {
+        "template": "<{state}_t,{test}>"
+      },
+      "reader_admissibility_fixture": {
+        "id": "constant-test-h1-admissibility-v1",
+        "content_id": "554c3f853e69ae9148ac766dd84550f27f2f568397abbda66795029005591b61",
+        "theorem_kind": "CONSTANT_SCALAR_H1_ADMISSIBILITY"
+      },
+      "time_pairing_fixture": {
+        "id": "weak-time-derivative-pairing-v1",
+        "content_id": "8dff09d729fb4f2aef5590f89cd921b0e254520e4e3dc336ce3149acc5b69d60",
+        "theorem_kind": "WEAK_TIME_DERIVATIVE_PAIRING"
+      },
+      "derivative": {
+        "primitive": "SCALAR_MEAN_DERIVATIVE",
+        "template": "measure({domain})*d_dt(mean({state}))"
+      },
+      "terms": [
+        {
+          "role": "INTERNAL",
+          "primitive": "SCALAR_DIFFUSION",
+          "action": "ANNIHILATE",
+          "count": 1,
+          "support": {
+            "kind": "THEOREM",
+            "fixture": {
+              "id": "constant-gradient-zero-v1",
+              "content_id": "53717f29ca5bbb5a8d4e4cbab39b7eb83c0fcebbff15efa380f45b8638130c49",
+              "theorem_kind": "CONSTANT_SCALAR_GRADIENT_ZERO"
+            }
+          }
+        },
+        {
+          "role": "SOURCE",
+          "primitive": "SCALAR_SOURCE",
+          "action": "RETAIN",
+          "count": 1,
+          "support": {
+            "kind": "STRUCTURAL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heat-mean-open-port-constant-test-v1",
+      "version": "0.3.0",
+      "query": {
+        "kind": "LAW",
+        "reader_kind": "CONSTANT_TEST",
+        "reader_id_mode": "LITERAL",
+        "reader_id": "one",
+        "observable_primitive": "MEAN_STATE"
+      },
+      "profile": {
+        "domain_class": "bounded_lipschitz",
+        "solution_sense": "WEAK",
+        "state_value_primitive": "SCALAR",
+        "test_space_template": "H1({domain})",
+        "field_spatial_space_template": "H1({domain})",
+        "field_time_space": "L2(0,T;H1)",
+        "field_derivative_space": "L2(0,T;H1*)",
+        "regularity": "L2(H1) & H1(H1*)",
+        "time_derivative_order": 1,
+        "boundary_primitive": "SINGLE_WEAK_CONORMAL_PORT"
+      },
+      "storage": {
+        "template": "<{state}_t,{test}>"
+      },
+      "reader_admissibility_fixture": {
+        "id": "constant-test-h1-admissibility-v1",
+        "content_id": "554c3f853e69ae9148ac766dd84550f27f2f568397abbda66795029005591b61",
+        "theorem_kind": "CONSTANT_SCALAR_H1_ADMISSIBILITY"
+      },
+      "time_pairing_fixture": {
+        "id": "weak-time-derivative-pairing-v1",
+        "content_id": "8dff09d729fb4f2aef5590f89cd921b0e254520e4e3dc336ce3149acc5b69d60",
+        "theorem_kind": "WEAK_TIME_DERIVATIVE_PAIRING"
+      },
+      "derivative": {
+        "primitive": "SCALAR_MEAN_DERIVATIVE",
+        "template": "measure({domain})*d_dt(mean({state}))"
+      },
+      "terms": [
+        {
+          "role": "INTERNAL",
+          "primitive": "SCALAR_DIFFUSION",
+          "action": "ANNIHILATE",
+          "count": 1,
+          "support": {
+            "kind": "THEOREM",
+            "fixture": {
+              "id": "constant-gradient-zero-v1",
+              "content_id": "53717f29ca5bbb5a8d4e4cbab39b7eb83c0fcebbff15efa380f45b8638130c49",
+              "theorem_kind": "CONSTANT_SCALAR_GRADIENT_ZERO"
+            }
+          }
+        },
+        {
+          "role": "SOURCE",
+          "primitive": "SCALAR_SOURCE",
+          "action": "RETAIN",
+          "count": 1,
+          "support": {
+            "kind": "STRUCTURAL"
+          }
+        },
+        {
+          "role": "PORT",
+          "primitive": "SCALAR_WEAK_PORT",
+          "action": "RETAIN",
+          "count": 1,
+          "support": {
+            "kind": "THEOREM",
+            "fixture": {
+              "id": "constant-trace-one-v1",
+              "content_id": "15a40852429615d805197c46f98107586cd86440c8a604947d8253ae04ccc386",
+              "theorem_kind": "CONSTANT_SCALAR_TRACE_ONE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "reaction-diffusion-constant-vector-invariant-v1",
+      "version": "0.2.0",
+      "query": {
+        "kind": "LAW",
+        "reader_kind": "CONSTANT_VECTOR_TEST",
+        "reader_id_mode": "DATA_REF",
+        "reader_data_role": "READER",
+        "observable_primitive": "VECTOR_INTEGRAL"
+      },
+      "profile": {
+        "domain_class": "bounded_lipschitz",
+        "solution_sense": "WEAK",
+        "state_value_primitive": "FINITE_VECTOR",
+        "test_space_template": "H1({domain};{value_type})",
+        "field_spatial_space_template": "H1({domain};{value_type})",
+        "field_time_space": "L2(0,T;H1)",
+        "field_derivative_space": "L2(0,T;H1*)",
+        "regularity": "L2(H1) & H1(H1*)",
+        "time_derivative_order": 1,
+        "boundary_primitive": "EXACT_ZERO_NEUMANN"
+      },
+      "storage": {
+        "template": "<{state}_t,{test}>"
+      },
+      "reader_admissibility_fixture": {
+        "id": "constant-vector-test-h1-admissibility-v1",
+        "content_id": "758da5ad1a7d0ba4c4f0a1ebeecf290a095f6ecfdc604d37f937cdf7e9c1d379",
+        "theorem_kind": "CONSTANT_VECTOR_H1_ADMISSIBILITY"
+      },
+      "time_pairing_fixture": {
+        "id": "weak-time-derivative-pairing-v1",
+        "content_id": "8dff09d729fb4f2aef5590f89cd921b0e254520e4e3dc336ce3149acc5b69d60",
+        "theorem_kind": "WEAK_TIME_DERIVATIVE_PAIRING"
+      },
+      "derivative": {
+        "primitive": "VECTOR_INTEGRAL_DERIVATIVE",
+        "template": "d_dt(int({reader}^T {state}))"
+      },
+      "terms": [
+        {
+          "role": "INTERNAL",
+          "primitive": "VECTOR_DIFFUSION",
+          "action": "ANNIHILATE",
+          "count": 1,
+          "support": {
+            "kind": "THEOREM",
+            "fixture": {
+              "id": "constant-vector-gradient-zero-v1",
+              "content_id": "a7e2ca30eef5ce07cd9962f21fde2a7b2bfd6acd7a1962865fef50a5b6877b8b",
+              "theorem_kind": "CONSTANT_VECTOR_GRADIENT_ZERO"
+            }
+          }
+        },
+        {
+          "role": "REACTION",
+          "primitive": "VECTOR_REACTION",
+          "action": "ANNIHILATE",
+          "count": 1,
+          "support": {
+            "kind": "LEFT_NULLSPACE",
+            "matrix_data_role": "STOICHIOMETRY"
+          }
+        },
+        {
+          "role": "SOURCE",
+          "primitive": "VECTOR_SOURCE",
+          "action": "RETAIN",
+          "count": 1,
+          "support": {
+            "kind": "STRUCTURAL"
+          }
+        }
+      ]
+    }
+  ]
+}

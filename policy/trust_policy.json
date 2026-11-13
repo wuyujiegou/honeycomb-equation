@@ -1,0 +1,11 @@
+{
+  "policy_id": "strict-v2",
+  "principles": {
+    "claim_class_restriction_required": true,
+    "conflicting_propositions_are_quarantined_as_roots_premises_and_conclusions": true,
+    "premise_free_rules_forbidden": true,
+    "scope_expansion_requires_explicit_transport_certificate": true,
+    "unverified_evidence_cannot_enter_certified_support": true
+  },
+  "version": "0.2.0"
+}

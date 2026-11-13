@@ -1,0 +1,32 @@
+{
+  "model": "heat_neumann",
+  "geometry": {"domain": "Omega", "dimension": 2, "class": "bounded_lipschitz"},
+  "time": {"interval": [0, "T"], "direction": "FORWARD"},
+  "fields": {
+    "u": {
+      "role": "STATE", "value": "scalar", "spatial_space": "H1(Omega)", "time_space": "L2(0,T;H1)",
+      "time_derivative": {"order": 1, "space": "L2(0,T;H1*)"}
+    }
+  },
+  "data": {
+    "kappa": {"role": "COEFFICIENT", "semantic": "EXACT_RATIONAL", "rational": [1, 2]},
+    "f": {"role": "SOURCE", "semantic": "SYMBOLIC", "value": "f"},
+    "u0": {"role": "INITIAL", "semantic": "SYMBOLIC", "value": "u0"}
+  },
+  "equations": [
+    {
+      "id": "heat_balance", "sense": "WEAK",
+      "test": {"symbol": "phi", "space": "H1(Omega)"},
+      "storage": {"id": "storage", "expr": "<u_t,phi>", "symbols": ["u", "phi"]},
+      "terms": [
+        {"id": "diffusion", "sign": 1, "role": "INTERNAL", "expr": "kappa*int(grad(u).grad(phi))", "symbols": ["kappa", "u", "phi"]},
+        {"id": "source", "sign": -1, "role": "SOURCE", "expr": "<f,phi>", "symbols": ["f", "phi"]}
+      ]
+    }
+  ],
+  "initial": [{"field": "u", "data_ref": "u0", "derivative_slot": 0}],
+  "boundary": [
+    {"id": "Gamma", "field": "u", "kind": "NEUMANN", "semantic": "EXACT", "value": {"semantic": "EXACT_RATIONAL", "rational": [0, 1]}}
+  ],
+  "solution": {"equation_sense": "WEAK", "regularity": {"u": "L2(H1) & H1(H1*)"}}
+}

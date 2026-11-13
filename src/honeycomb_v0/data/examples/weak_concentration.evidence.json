@@ -1,0 +1,25 @@
+{
+  "kinds": [
+    "WEAK_STATE",
+    "YOUNG_MEASURE",
+    "CONCENTRATION_MEASURE"
+  ],
+  "model_id": "mv-cli",
+  "observable_kind": "CONCENTRATION_SENSITIVE",
+  "query_id": "energy",
+  "relation_id": "mv-cli-conc",
+  "scope": {
+    "level": "CONTINUUM",
+    "solution_class": "weak"
+  },
+  "sequence_id": "conc-seq",
+  "source_id": "external-proof:concentration-v1",
+  "theorem_fixture_id": "explicit-concentration-weak-young-concentration-v1",
+  "witness": {
+    "ambient_space": "L2_0_1",
+    "concentration_measure": "SPATIAL_DELTA_0",
+    "sequence_family": "SQRT_N_INDICATOR_0_1_OVER_N",
+    "weak_limit": "0",
+    "young_measure": "VALUE_DELTA_0"
+  }
+}

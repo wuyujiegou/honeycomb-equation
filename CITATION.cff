@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software artifact, please cite the software companion preprint and this artifact."
+title: "Honeycomb Equation Reference Executable Semantics"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Bingchao
+    affiliation: "Huangshi Wuyu Structural Intelligence Technology Co., Ltd."
+    orcid: "https://orcid.org/0009-0004-1160-2602"
+    email: "sanhun2020@outlook.com"
+version: "0.2.1"
+date-released: "2026-11-13"
+abstract: >-
+  Reference executable semantics and conformance kernel for the Honeycomb Equation framework,
+  including proof-credit closure, query assembly, six-face evaluation, lineage checks, PDE
+  examples, and weak-limit ingress regression cases.
+license: MIT

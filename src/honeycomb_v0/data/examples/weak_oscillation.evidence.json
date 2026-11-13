@@ -1,0 +1,23 @@
+{
+  "kinds": [
+    "WEAK_STATE",
+    "YOUNG_MEASURE"
+  ],
+  "model_id": "mv-cli",
+  "observable_kind": "NONLINEAR_OSCILLATION",
+  "query_id": "square",
+  "relation_id": "mv-cli-osc",
+  "scope": {
+    "level": "CONTINUUM",
+    "solution_class": "weak"
+  },
+  "sequence_id": "osc-seq",
+  "source_id": "external-proof:oscillation-v1",
+  "theorem_fixture_id": "explicit-oscillation-weak-young-v1",
+  "witness": {
+    "ambient_space": "L2_PERIODIC_1D",
+    "sequence_family": "SIGN_SIN_NX",
+    "weak_limit": "0",
+    "young_measure": "HALF_DELTA_MINUS1_PLUS_HALF_DELTA_PLUS1"
+  }
+}
